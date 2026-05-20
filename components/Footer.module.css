@@ -1,0 +1,114 @@
+.footer {
+  background-color: var(--color-primary-dark, #1b3a18);
+  color: var(--color-text-on-primary, #ffffff);
+  padding: 60px 0 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  padding-bottom: 40px;
+}
+
+/* Company info */
+.companyInfo {
+  flex: 1;
+}
+
+.companyName {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.companyDesc {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0 0 20px;
+}
+
+.address {
+  font-style: normal;
+  line-height: 1.8;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.address p {
+  margin: 0;
+}
+
+.contactLink {
+  color: var(--color-text-on-primary, #ffffff);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contactLink:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* Quick links */
+.quickLinks {
+  flex-shrink: 0;
+}
+
+.quickLinksTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.quickLinksNav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quickLink {
+  color: var(--color-text-on-primary, #ffffff);
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.quickLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .quickLinksNav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

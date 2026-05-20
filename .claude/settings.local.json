@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "WebSearch",
+      "WebFetch(domain:www.figma.com)",
+      "WebFetch(domain:elements.envato.com)",
+      "WebFetch(domain:elementor.com)",
+      "WebFetch(domain:ko.wix.com)",
+      "Bash(npm create:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(cp:*)",
+      "Bash(/c/Users/pearl/desktop/woorifns-homepage/package.json:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "mcp__claude_ai_Supabase__list_organizations",
+      "mcp__claude_ai_Supabase__list_projects",
+      "mcp__claude_ai_Supabase__get_cost",
+      "mcp__claude_ai_Supabase__get_organization",
+      "mcp__claude_ai_Supabase__confirm_cost",
+      "mcp__claude_ai_Supabase__create_project",
+      "mcp__claude_ai_Supabase__apply_migration",
+      "mcp__claude_ai_Supabase__get_project_url",
+      "mcp__claude_ai_Supabase__get_publishable_keys",
+      "Bash(/c/Users/pearl/desktop/woorifns-homepage/.env.local:*)",
+      "WebFetch(domain:www.growbatheaston.co.uk)",
+      "Bash(curl:*)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}

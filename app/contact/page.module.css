@@ -1,0 +1,301 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ===== Hero Banner ===== */
+.hero {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.breadcrumb {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== Content ===== */
+.content {
+  padding: 80px 0;
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ===== Form Card ===== */
+.formCard {
+  background-color: var(--color-surface);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+/* ===== Form Fields ===== */
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.938rem;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #e53e3e;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  transition: border-color 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* ===== Meal Frequency Row ===== */
+.mealRow {
+  display: flex;
+  gap: 16px;
+}
+
+.mealSelect {
+  flex: 1;
+}
+
+.mealLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+/* ===== Submit Button ===== */
+.submitButton {
+  width: 100%;
+  height: 52px;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 8px;
+}
+
+.submitButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== Error Message ===== */
+.errorMessage {
+  color: #e53e3e;
+  font-size: 0.938rem;
+  margin-bottom: 16px;
+}
+
+/* ===== Success State ===== */
+.successState {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.successMessage {
+  font-size: 1.063rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+/* ===== Contact Info Card ===== */
+.infoCard {
+  background-color: var(--color-surface);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 28px;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoItem {
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 3px solid var(--color-primary);
+}
+
+.infoItem strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.infoItem p {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.infoNote {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: 220px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 48px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard,
+  .infoCard {
+    padding: 28px 20px;
+  }
+
+  .mealRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .formTitle {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 180px;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .formCard,
+  .infoCard {
+    padding: 24px 16px;
+  }
+}

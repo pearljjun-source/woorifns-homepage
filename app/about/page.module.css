@@ -1,0 +1,439 @@
+/* ===========================================
+   About Page Styles
+   =========================================== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* ===========================================
+   Page Hero Banner
+   =========================================== */
+.hero {
+  background-color: var(--color-secondary);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-on-primary);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.heroTitle {
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.heroBreadcrumb {
+  font-size: var(--font-size-base);
+  opacity: 0.85;
+}
+
+.heroBreadcrumb a {
+  color: var(--color-text-on-primary);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.heroBreadcrumb a:hover {
+  opacity: 0.7;
+}
+
+/* ===========================================
+   Section Title (shared)
+   =========================================== */
+.sectionTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  padding-bottom: var(--spacing-md);
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-md) auto 0;
+  border-radius: var(--radius-full);
+}
+
+/* ===========================================
+   인사말 (Greeting) Section
+   =========================================== */
+.greeting {
+  padding: 80px 0;
+  background-color: var(--color-surface);
+}
+
+.greetingContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.greetingContent p {
+  font-size: var(--font-size-lg);
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.greetingContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================================
+   회사 개요 (Company Overview) Section
+   =========================================== */
+.overview {
+  padding: 80px 0;
+  background-color: var(--color-background);
+}
+
+.overviewTable {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.overviewRow {
+  display: flex;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.overviewRow:last-child {
+  border-bottom: none;
+}
+
+.overviewRow:nth-child(odd) {
+  background-color: var(--color-surface);
+}
+
+.overviewRow:nth-child(even) {
+  background-color: var(--color-accent);
+}
+
+.overviewLabel {
+  flex: 0 0 180px;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: rgba(45, 90, 39, 0.08);
+  display: flex;
+  align-items: center;
+}
+
+.overviewValue {
+  flex: 1;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+}
+
+/* ===========================================
+   경영이념 (Philosophy) Section
+   =========================================== */
+.philosophy {
+  padding: 80px 0;
+  background-color: var(--color-surface);
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.philosophyCard {
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  border-top: 4px solid var(--color-primary);
+}
+
+.philosophyCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.philosophyCardCustomer {
+  border-top-color: var(--color-primary);
+}
+
+.philosophyCardQuality {
+  border-top-color: var(--color-secondary);
+}
+
+.philosophyCardGrowth {
+  border-top-color: #3b7dd8;
+}
+
+.philosophyTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.philosophyDescription {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  margin-top: calc(-1 * var(--spacing-lg));
+}
+
+.visionBox {
+  max-width: 600px;
+  margin: var(--spacing-2xl) auto 0;
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-primary);
+}
+
+.visionBox p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+.visionBox p:last-child {
+  margin-bottom: 0;
+}
+
+.visionBox strong {
+  color: var(--color-primary);
+}
+
+/* ===========================================
+   전문 인력 관리 (Personnel) Section
+   =========================================== */
+.personnel {
+  padding: 80px 0;
+  background-color: var(--color-background);
+}
+
+.featureList {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.featureItem:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.featureDot {
+  flex-shrink: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  margin-top: 8px;
+}
+
+.featureItem strong {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.featureItem p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ===========================================
+   위생·안전 관리 (Hygiene) Section
+   =========================================== */
+.hygiene {
+  padding: 80px 0;
+  background-color: var(--color-surface);
+}
+
+.hygieneGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.hygieneCard {
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+  border-left: 4px solid var(--color-primary);
+}
+
+.hygieneCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.hygieneCard h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hygieneCard p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ===========================================
+   Responsive
+   =========================================== */
+@media (max-width: 1023px) {
+  .hero {
+    height: 250px;
+  }
+
+  .heroTitle {
+    font-size: var(--font-size-4xl);
+  }
+
+  .philosophyGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .hygieneGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .greeting,
+  .overview,
+  .philosophy,
+  .personnel,
+  .hygiene {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 220px;
+  }
+
+  .heroTitle {
+    font-size: var(--font-size-3xl);
+  }
+
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .hygieneGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .overviewRow {
+    flex-direction: column;
+  }
+
+  .overviewLabel {
+    flex: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  .overviewValue {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .greeting,
+  .overview,
+  .philosophy,
+  .personnel,
+  .hygiene {
+    padding: 48px 0;
+  }
+
+  .greetingContent p {
+    font-size: var(--font-size-base);
+    text-align: left;
+  }
+
+  .featureItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 639px) {
+  .hero {
+    height: 200px;
+  }
+
+  .heroTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
