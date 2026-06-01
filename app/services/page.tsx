@@ -204,31 +204,51 @@ export default function ServicesPage() {
           <h2 className={styles.sectionTitle}>차별화된 부가 서비스</h2>
           <div className={styles.extraGrid}>
             <div className={styles.extraCard}>
-              <h3 className={styles.cardTitle}>월 1회 이상 특식</h3>
-              <p className={styles.cardDescription}>
-                삼겹살구이 · 모듬쌈, 불낙전골, 월남쌈 등
-                고품위 특별식 제공
-              </p>
+              <div className={styles.extraImageWrap}>
+                <Image src="/images/extra-special-meal.jpg" alt="특식 서비스" fill className={styles.extraImage} />
+              </div>
+              <div className={styles.extraBody}>
+                <h3 className={styles.cardTitle}>월 1회 이상 특식</h3>
+                <p className={styles.cardDescription}>
+                  삼겹살구이 · 모듬쌈, 불낙전골, 월남쌈 등
+                  고품위 특별식 제공
+                </p>
+              </div>
             </div>
             <div className={styles.extraCard}>
-              <h3 className={styles.cardTitle}>매주 후식 서비스</h3>
-              <p className={styles.cardDescription}>
-                매주 1회 이상 후식을 제공하여 식사 만족도를 높입니다
-              </p>
+              <div className={styles.extraImageWrap}>
+                <Image src="/images/extra-dessert.jpg" alt="후식 서비스" fill className={styles.extraImage} />
+              </div>
+              <div className={styles.extraBody}>
+                <h3 className={styles.cardTitle}>매주 후식 서비스</h3>
+                <p className={styles.cardDescription}>
+                  매주 1회 이상 후식을 제공하여 식사 만족도를 높입니다
+                </p>
+              </div>
             </div>
             <div className={styles.extraCard}>
-              <h3 className={styles.cardTitle}>소스류 PLUS (주 1회)</h3>
-              <p className={styles.cardDescription}>
-                카레 · 짜장 · 마파두부 등 다양한 소스로
-                즐거운 선택의 재미 제공
-              </p>
+              <div className={styles.extraImageWrap}>
+                <Image src="/images/extra-sauce.jpg" alt="소스류 서비스" fill className={styles.extraImage} />
+              </div>
+              <div className={styles.extraBody}>
+                <h3 className={styles.cardTitle}>소스류 PLUS (주 1회)</h3>
+                <p className={styles.cardDescription}>
+                  카레 · 짜장 · 마파두부 등 다양한 소스로
+                  즐거운 선택의 재미 제공
+                </p>
+              </div>
             </div>
             <div className={styles.extraCard}>
-              <h3 className={styles.cardTitle}>시즌 이벤트</h3>
-              <p className={styles.cardDescription}>
-                빼빼로데이 · 발렌타인데이 · 삼겹살데이 등
-                기념일 이벤트로 식단에 활력
-              </p>
+              <div className={styles.extraImageWrap}>
+                <Image src="/images/extra-event.jpg" alt="시즌 이벤트" fill className={styles.extraImage} />
+              </div>
+              <div className={styles.extraBody}>
+                <h3 className={styles.cardTitle}>시즌 이벤트</h3>
+                <p className={styles.cardDescription}>
+                  빼빼로데이 · 발렌타인데이 · 삼겹살데이 등
+                  기념일 이벤트로 식단에 활력
+                </p>
+              </div>
             </div>
           </div>
         </div>
