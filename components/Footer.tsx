@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
@@ -14,7 +15,10 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.companyInfo}>
-            <h3 className={styles.companyName}>㈜우리푸드앤드서비스</h3>
+            <div className={styles.companyNameRow}>
+              <Logo className={styles.logoIcon} />
+              <h3 className={styles.companyName}>㈜우리푸드앤드서비스</h3>
+            </div>
             <p className={styles.companyDesc}>급식위탁 전문기업</p>
             <address className={styles.address}>
               <p>충남 천안시 동남구 통정8로 48-55</p>

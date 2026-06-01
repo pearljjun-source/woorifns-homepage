@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import { supabase } from '@/lib/supabase';
 
 interface FormData {
   companyName: string;
@@ -44,22 +43,12 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitError('');
     try {
-      if (!supabase) {
-        throw new Error('Supabase not configured');
-      }
-      const { error } = await supabase.from('inquiries').insert([
-        {
-          company_name: formData.companyName,
-          contact_name: formData.contactName,
-          phone: formData.phone,
-          meal_count: formData.mealCount ? parseInt(formData.mealCount) : null,
-          breakfast_per_week: parseInt(formData.breakfastPerWeek),
-          lunch_per_week: parseInt(formData.lunchPerWeek),
-          dinner_per_week: parseInt(formData.dinnerPerWeek),
-          message: formData.message,
-        },
-      ]);
-      if (error) throw error;
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error('API error');
       setIsSubmitted(true);
       setFormData(initialFormData);
     } catch (err) {

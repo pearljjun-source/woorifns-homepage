@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "./Logo";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -24,7 +23,10 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
-          <Logo className={styles.logoImage} />
+          <span className={styles.logoText}>
+            <span className={styles.logoBold}>우리</span>
+            <span className={styles.logoLight}>푸드앤드서비스</span>
+          </span>
         </Link>
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ""}`}>

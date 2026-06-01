@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -22,32 +23,52 @@ export default function ServicesPage() {
           <h2 className={styles.sectionTitle}>업종별 맞춤 급식 서비스</h2>
           <div className={styles.serviceAreasGrid}>
             <div className={styles.serviceAreaCard}>
-              <h3 className={styles.cardTitle}>산업체 급식</h3>
-              <p className={styles.cardDescription}>
-                근무 패턴 맞춤 탄력적 메뉴 운영 · 365일 연중 운영.
-                사업장별 맞춤 식단 운영으로 임직원 만족도를 높입니다.
-              </p>
+              <div className={styles.serviceAreaImageWrap}>
+                <Image src="/images/industrial-cafeteria.png" alt="산업체 급식 구내식당" fill className={styles.serviceAreaImage} />
+              </div>
+              <div className={styles.serviceAreaBody}>
+                <h3 className={styles.cardTitle}>산업체 급식</h3>
+                <p className={styles.cardDescription}>
+                  근무 패턴 맞춤 탄력적 메뉴 운영 · 365일 연중 운영.
+                  사업장별 맞춤 식단 운영으로 임직원 만족도를 높입니다.
+                </p>
+              </div>
             </div>
             <div className={styles.serviceAreaCard}>
-              <h3 className={styles.cardTitle}>병원 · 의료기관 급식</h3>
-              <p className={styles.cardDescription}>
-                환자식 · 직원식 동시 운영, 영양 균형 식단.
-                의료진과 협력하여 최적의 식단을 구성합니다.
-              </p>
+              <div className={styles.serviceAreaImageWrap}>
+                <Image src="/images/hospital-meal.png" alt="병원 급식 환자식 직원식" fill className={styles.serviceAreaImage} />
+              </div>
+              <div className={styles.serviceAreaBody}>
+                <h3 className={styles.cardTitle}>병원 · 의료기관 급식</h3>
+                <p className={styles.cardDescription}>
+                  환자식 · 직원식 동시 운영, 영양 균형 식단.
+                  의료진과 협력하여 최적의 식단을 구성합니다.
+                </p>
+              </div>
             </div>
             <div className={styles.serviceAreaCard}>
-              <h3 className={styles.cardTitle}>노인요양원 · 복지시설 급식</h3>
-              <p className={styles.cardDescription}>
-                어르신 맞춤 식단, 저작 편의성 중심 운영.
-                체험형 쿠킹 클래스도 함께 운영합니다.
-              </p>
+              <div className={styles.serviceAreaImageWrap}>
+                <Image src="/images/elderly-care.png" alt="요양원 급식 어르신 식사" fill className={styles.serviceAreaImage} />
+              </div>
+              <div className={styles.serviceAreaBody}>
+                <h3 className={styles.cardTitle}>노인요양원 · 복지시설 급식</h3>
+                <p className={styles.cardDescription}>
+                  어르신 맞춤 식단, 저작 편의성 중심 운영.
+                  체험형 쿠킹 클래스도 함께 운영합니다.
+                </p>
+              </div>
             </div>
             <div className={styles.serviceAreaCard}>
-              <h3 className={styles.cardTitle}>학교 · 기숙사 급식</h3>
-              <p className={styles.cardDescription}>
-                성장기 맞춤 영양식단, 알레르기 정보 공개.
-                정기 만족도 조사로 지속적으로 개선합니다.
-              </p>
+              <div className={styles.serviceAreaImageWrap}>
+                <Image src="/images/school-lunch.png" alt="학교 급식 배식대" fill className={styles.serviceAreaImage} />
+              </div>
+              <div className={styles.serviceAreaBody}>
+                <h3 className={styles.cardTitle}>학교 · 기숙사 급식</h3>
+                <p className={styles.cardDescription}>
+                  성장기 맞춤 영양식단, 알레르기 정보 공개.
+                  정기 만족도 조사로 지속적으로 개선합니다.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -95,25 +116,40 @@ export default function ServicesPage() {
           </p>
           <div className={styles.qualityGrid}>
             <div className={styles.qualityCard}>
-              <h3 className={styles.cardTitle}>밥 품질관리</h3>
-              <p className={styles.cardDescription}>
-                도정 후 14일 이내 사용 · 보관온도 15℃ 유지 ·
-                취반 후 30분 이상 보관 금지 · 싸리기 5% 이내 관리
-              </p>
+              <div className={styles.qualityImageWrap}>
+                <Image src="/images/rice-quality.jpg" alt="밥 품질관리" fill className={styles.qualityImage} />
+              </div>
+              <div className={styles.qualityBody}>
+                <h3 className={styles.cardTitle}>밥 품질관리</h3>
+                <p className={styles.cardDescription}>
+                  도정 후 14일 이내 사용 · 보관온도 15℃ 유지 ·
+                  취반 후 30분 이상 보관 금지 · 싸리기 5% 이내 관리
+                </p>
+              </div>
             </div>
             <div className={styles.qualityCard}>
-              <h3 className={styles.cardTitle}>국 · 탕 품질관리</h3>
-              <p className={styles.cardDescription}>
-                육수는 하루 전 진하게 준비 · 재료에 밑간해 양념이 배게 ·
-                약불에서 오래 끓여 제 맛 · 천연조미료 사용
-              </p>
+              <div className={styles.qualityImageWrap}>
+                <Image src="/images/soup-quality.jpg" alt="국 탕 품질관리" fill className={styles.qualityImage} />
+              </div>
+              <div className={styles.qualityBody}>
+                <h3 className={styles.cardTitle}>국 · 탕 품질관리</h3>
+                <p className={styles.cardDescription}>
+                  육수는 하루 전 진하게 준비 · 재료에 밑간해 양념이 배게 ·
+                  약불에서 오래 끓여 제 맛 · 천연조미료 사용
+                </p>
+              </div>
             </div>
             <div className={styles.qualityCard}>
-              <h3 className={styles.cardTitle}>김치 품질관리</h3>
-              <p className={styles.cardDescription}>
-                국내산 무 · 배추 사용 · 계절별 숙성도 차별화 관리 ·
-                맛 · 질감 · 색상 · 냄새 검사 · 포장상태 · 유통기한 확인
-              </p>
+              <div className={styles.qualityImageWrap}>
+                <Image src="/images/kimchi-quality.jpg" alt="김치 품질관리" fill className={styles.qualityImage} />
+              </div>
+              <div className={styles.qualityBody}>
+                <h3 className={styles.cardTitle}>김치 품질관리</h3>
+                <p className={styles.cardDescription}>
+                  국내산 무 · 배추 사용 · 계절별 숙성도 차별화 관리 ·
+                  맛 · 질감 · 색상 · 냄새 검사 · 포장상태 · 유통기한 확인
+                </p>
+              </div>
             </div>
           </div>
         </div>

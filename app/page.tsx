@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 const jsonLd = {
@@ -44,90 +45,109 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>정직한 밥상, 건강한 내일</h1>
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="초록 나뭇잎 배경"
+          fill
+          priority
+          className={styles.heroBg}
+        />
+        <div className={styles.heroOverlay} />
+        <div className={styles.heroText}>
+          <span className={styles.heroLabel}>SINCE 2005</span>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.heroTitleBold}>정직한 밥상,</span><br /><span className={styles.heroTitleBold}>건강한 내일</span>
+          </h1>
+          <span className={styles.heroDivider} />
           <p className={styles.heroSubtitle}>
-            20년 전통 급식위탁 전문기업 우리푸드앤드서비스가 건강하고 맛있는 식사를 약속합니다
+            20년 전통 급식위탁 전문기업<br />
+            우리푸드앤드서비스가 건강하고 맛있는 식사를 약속합니다
           </p>
           <div className={styles.heroButtons}>
-            <Link href="/contact" className={styles.btnPrimary}>
-              문의하기
+            <Link href="/contact" className={styles.btnPrimaryHero}>
+              무료 상담 신청
             </Link>
-            <Link href="/services" className={styles.btnSecondary}>
+            <Link href="/services" className={styles.btnOutlineHero}>
               서비스 보기
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className={styles.values}>
+      {/* Intro + Stats Section */}
+      <section className={styles.intro}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>우리의 핵심 가치</h2>
-          <div className={styles.valuesGrid}>
-            <div className={styles.valueCard}>
-              <div className={styles.valueAccent} />
-              <h3 className={styles.valueTitle}>신선 (FRESHNESS)</h3>
-              <p className={styles.valueDescription}>
-                엄격한 기준의 신선 식재료, 산지 직거래로 당일 조리합니다
-              </p>
+          <p className={styles.introText}>
+            2005년부터 한결같은 마음으로,<br />
+            <strong>정직한 식재료</strong>와 <strong>정성 어린 조리</strong>로 매일의 한 끼를 책임집니다.
+          </p>
+          <div className={styles.statsGrid}>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>20</span>
+              <span className={styles.statUnit}>년+</span>
+              <p className={styles.statLabel}>급식 운영 경력</p>
             </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueAccent} />
-              <h3 className={styles.valueTitle}>정성 (SINCERITY)</h3>
-              <p className={styles.valueDescription}>
-                표준 레시피와 숙련된 조리사의 정성으로 한 끼를 준비합니다
-              </p>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>100</span>
+              <span className={styles.statUnit}>%</span>
+              <p className={styles.statLabel}>직접 채용 원칙</p>
             </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueAccent} />
-              <h3 className={styles.valueTitle}>신뢰 (TRUST)</h3>
-              <p className={styles.valueDescription}>
-                투명한 운영과 20년 파트너십으로 고객과 함께합니다
-              </p>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>365</span>
+              <span className={styles.statUnit}>일</span>
+              <p className={styles.statLabel}>연중 운영 체계</p>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>HACCP</span>
+              <span className={styles.statUnit}></span>
+              <p className={styles.statLabel}>위생관리 기준 준수</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Preview Section */}
-      <section className={styles.services}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>맞춤형 급식 서비스</h2>
-          <p className={styles.sectionSubtitle}>
-            다양한 업종에 최적화된 급식 솔루션을 제공합니다
-          </p>
-          <div className={styles.servicesGrid}>
-            <div className={styles.serviceCard}>
-              <h3 className={styles.serviceTitle}>산업체 급식</h3>
-              <p className={styles.serviceDescription}>
-                근무 패턴 맞춤 탄력적 메뉴 운영 · 365일 연중 운영
-              </p>
-            </div>
-            <div className={styles.serviceCard}>
-              <h3 className={styles.serviceTitle}>병원 · 의료기관 급식</h3>
-              <p className={styles.serviceDescription}>
-                환자식 · 직원식 동시 운영, 영양 균형 식단
-              </p>
-            </div>
-            <div className={styles.serviceCard}>
-              <h3 className={styles.serviceTitle}>노인요양원 · 복지시설 급식</h3>
-              <p className={styles.serviceDescription}>
-                어르신 맞춤 식단, 저작 편의성 중심 운영
-              </p>
-            </div>
-            <div className={styles.serviceCard}>
-              <h3 className={styles.serviceTitle}>학교 · 기숙사 급식</h3>
-              <p className={styles.serviceDescription}>
-                성장기 맞춤 영양식단, 알레르기 정보 공개
-              </p>
+      {/* Brand Section */}
+      <section className={styles.brand}>
+        <div className={styles.brandGallery}>
+          <div className={styles.brandCard}>
+            <Image src="/images/gallery-industrial.jpg" alt="맞춤 영양 식단" fill className={styles.brandImage} />
+            <div className={styles.brandOverlay}>
+              <span className={styles.brandLabel}>NUTRITION</span>
+              <h3 className={styles.brandTitle}>영양</h3>
+              <p className={styles.brandDesc}>전문 영양사 · 맞춤 식단 설계</p>
             </div>
           </div>
-          <div className={styles.servicesLink}>
-            <Link href="/services" className={styles.btnOutline}>
-              자세히 보기
-            </Link>
+          <div className={styles.brandCard}>
+            <Image src="/images/gallery-hospital.jpg" alt="정성 담긴 요리" fill className={styles.brandImage} />
+            <div className={styles.brandOverlay}>
+              <span className={styles.brandLabel}>SINCERITY</span>
+              <h3 className={styles.brandTitle}>정성</h3>
+              <p className={styles.brandDesc}>숙련된 조리사 · 표준 레시피</p>
+            </div>
           </div>
+          <div className={styles.brandCard}>
+            <Image src="/images/gallery-elderly.jpg" alt="신뢰의 파트너십" fill className={styles.brandImage} />
+            <div className={styles.brandOverlay}>
+              <span className={styles.brandLabel}>TRUST</span>
+              <h3 className={styles.brandTitle}>신뢰</h3>
+              <p className={styles.brandDesc}>투명한 운영 · 20년 파트너십</p>
+            </div>
+          </div>
+          <div className={styles.brandCard}>
+            <Image src="/images/gallery-school.jpg" alt="신선한 식재료" fill className={styles.brandImage} />
+            <div className={styles.brandOverlay}>
+              <span className={styles.brandLabel}>FRESHNESS</span>
+              <h3 className={styles.brandTitle}>신선</h3>
+              <p className={styles.brandDesc}>산지 직거래 · 당일 조리</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.brandCenter}>
+          <p className={styles.brandSlogan}>정직한 밥상, 건강한 내일</p>
+          <p className={styles.brandSub}>20년 전통 급식 전문기업 우리푸드앤드서비스</p>
+          <Link href="/services" className={styles.btnOutline}>
+            서비스 보기
+          </Link>
         </div>
       </section>
 

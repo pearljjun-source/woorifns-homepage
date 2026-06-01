@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
 
@@ -27,24 +28,26 @@ export default function AboutPage() {
           <h2 className={styles.sectionTitle}>
             정직한 밥상, 건강한 내일
           </h2>
-          <div className={styles.greetingContent}>
-            <p>
-              저희 ㈜우리푸드앤드서비스는 2005년부터 단체급식 사업을 운영하며
-              단 하나의 원칙을 지켜왔습니다.
-            </p>
-            <p>
-              단순히 끼니를 해결하는 공간을 넘어, 직원들이 매일 기대하는
-              식사 시간이 될 수 있도록 메뉴의 다양성과 품질에 끊임없이
-              투자하고 있습니다.
-            </p>
-            <p>
-              정직한 식재료, 정성 어린 조리, 진심을 담은 서비스.
-            </p>
-            <p>
-              현재까지 축적해온 실 경험과 앞선 운영 능력으로 합리적인 운영을
-              약속드리며, 집에서의 편안함과 어머니의 정성으로 감동 서비스를
-              실현하겠습니다.
-            </p>
+          <div className={styles.greetingLayout}>
+            <div className={styles.greetingContent}>
+              <p>
+                저희 ㈜우리푸드앤드서비스는 2005년부터 단체급식 사업을 운영하며
+                단 하나의 원칙을 지켜왔습니다.
+              </p>
+              <p>
+                단순히 끼니를 해결하는 공간을 넘어, 직원들이 매일 기대하는
+                식사 시간이 될 수 있도록 메뉴의 다양성과 품질에 끊임없이
+                투자하고 있습니다.
+              </p>
+              <p>
+                정직한 식재료, 정성 어린 조리, 진심을 담은 서비스.
+              </p>
+              <p>
+                현재까지 축적해온 실 경험과 앞선 운영 능력으로 합리적인 운영을
+                약속드리며, 집에서의 편안함과 어머니의 정성으로 감동 서비스를
+                실현하겠습니다.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -100,19 +103,28 @@ export default function AboutPage() {
           <h2 className={styles.sectionTitle}>경영이념 &amp; 비전</h2>
           <p className={styles.sectionSubtitle}>&ldquo;정직한 밥상, 건강한 내일&rdquo;</p>
           <div className={styles.philosophyGrid}>
-            <div className={`${styles.philosophyCard} ${styles.philosophyCardCustomer}`}>
+            <div className={styles.philosophyCard}>
+              <div className={styles.philosophyImageWrap}>
+                <Image src="/images/fresh-vegetables.jpg" alt="신선한 채소" fill className={styles.philosophyImage} />
+              </div>
               <h3 className={styles.philosophyTitle}>신선 (FRESHNESS)</h3>
               <p className={styles.philosophyDescription}>
                 엄격한 기준의 신선 식재료, 산지 직거래
               </p>
             </div>
-            <div className={`${styles.philosophyCard} ${styles.philosophyCardQuality}`}>
+            <div className={styles.philosophyCard}>
+              <div className={styles.philosophyImageWrap}>
+                <Image src="/images/chef-cooking.jpg" alt="정성스러운 조리" fill className={styles.philosophyImage} />
+              </div>
               <h3 className={styles.philosophyTitle}>정성 (SINCERITY)</h3>
               <p className={styles.philosophyDescription}>
                 표준 레시피와 숙련된 조리사의 정성
               </p>
             </div>
-            <div className={`${styles.philosophyCard} ${styles.philosophyCardGrowth}`}>
+            <div className={styles.philosophyCard}>
+              <div className={styles.philosophyImageWrap}>
+                <Image src="/images/trust-handshake.jpg" alt="신뢰의 파트너십" fill className={styles.philosophyImage} />
+              </div>
               <h3 className={styles.philosophyTitle}>신뢰 (TRUST)</h3>
               <p className={styles.philosophyDescription}>
                 투명한 운영, 20년 파트너십
@@ -133,6 +145,9 @@ export default function AboutPage() {
           <p className={styles.sectionSubtitle}>
             100% 직접 채용으로 책임감과 소속감이 탁월한 우수 인재 보유
           </p>
+          <div className={styles.personnelImageWrap}>
+            <Image src="/images/about-team.jpg" alt="전문 조리팀" fill className={styles.personnelImage} />
+          </div>
           <ul className={styles.featureList}>
             <li className={styles.featureItem}>
               <span className={styles.featureDot} aria-hidden="true"></span>
@@ -183,6 +198,9 @@ export default function AboutPage() {
           <p className={styles.sectionSubtitle}>
             HACCP 위생관리 및 정기점검으로 안전한 먹거리 제공
           </p>
+          <div className={styles.hygieneImageWrap}>
+            <Image src="/images/about-hygiene.jpg" alt="위생관리 현장" fill className={styles.hygieneImage} />
+          </div>
           <div className={styles.hygieneGrid}>
             <div className={styles.hygieneCard}>
               <h3>매일 위생 점검</h3>

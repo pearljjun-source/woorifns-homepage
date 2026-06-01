@@ -22,10 +22,23 @@
   flex: 1;
 }
 
+.companyNameRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.logoIcon {
+  height: 36px;
+  width: 36px;
+  flex-shrink: 0;
+}
+
 .companyName {
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 8px;
+  margin: 0;
 }
 
 .companyDesc {
