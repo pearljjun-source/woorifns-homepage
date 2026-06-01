@@ -478,13 +478,81 @@
     border-bottom: none;
   }
 
-  .serviceAreaCard,
-  .mealCard,
-  .qualityCard {
-    padding: 32px 24px;
-  }
-
   .cardTitle {
     font-size: 1.25rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 24px;
+  }
+
+  .ctaTitle {
+    font-size: 1.625rem;
+  }
+}
+
+/* ===== Responsive - 480px ===== */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .section,
+  .sectionAlt,
+  .cta {
+    padding: 48px 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.375rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.938rem;
+    margin-bottom: 32px;
+  }
+
+  .serviceAreaImageWrap,
+  .qualityImageWrap {
+    height: 160px;
+  }
+
+  .serviceAreaBody,
+  .qualityBody {
+    padding: 16px;
+  }
+
+  .mealCard {
+    padding: 28px 20px;
+  }
+
+  .extraCard {
+    padding: 28px 20px;
+  }
+
+  .processCircle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .processNumber {
+    font-size: 1.25rem;
+  }
+
+  .processLabel {
+    font-size: 0.813rem;
+  }
+
+  .btnPrimary {
+    padding: 14px 24px;
+    font-size: 0.938rem;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .ctaTitle {
+    font-size: 1.375rem;
   }
 }

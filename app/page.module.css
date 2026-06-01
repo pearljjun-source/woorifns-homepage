@@ -395,20 +395,46 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 80vh;
+    min-height: 70vh;
   }
 
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .heroSubtitle {
-    font-size: 0.938rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
   }
 
-  .intro,
-  .cta {
+  .heroLabel {
+    font-size: 0.625rem;
+    letter-spacing: 3px;
+    padding: 6px 16px;
+    margin-bottom: 24px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btnPrimaryHero,
+  .btnOutlineHero {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 14px 24px;
+  }
+
+  .intro {
     padding: 60px 0;
+  }
+
+  .introText {
+    font-size: 1.063rem;
+    margin-bottom: 40px;
   }
 
   .statsGrid {
@@ -420,8 +446,36 @@
     font-size: 2.25rem;
   }
 
+  .brandGallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brandCard {
+    height: 280px;
+  }
+
+  .brandTitle {
+    font-size: 2rem;
+  }
+
+  .brandDesc {
+    font-size: 0.875rem;
+  }
+
   .brandCenter {
     padding: 48px 24px;
+  }
+
+  .brandSlogan {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    padding: 60px 0;
+  }
+
+  .ctaTitle {
+    font-size: 1.625rem;
   }
 
   .sectionTitle {
@@ -430,13 +484,48 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+  }
+
   .heroTitle {
-    font-size: 2rem;
+    font-size: 1.75rem;
     letter-spacing: -0.5px;
   }
 
   .heroText {
-    padding: 60px 16px;
+    padding: 48px 16px;
+  }
+
+  .heroSubtitle {
+    font-size: 0.813rem;
+  }
+
+  .heroDivider {
+    margin: 0 auto 32px;
+  }
+
+  .intro {
+    padding: 48px 0;
+  }
+
+  .introText {
+    font-size: 0.938rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 12px;
+  }
+
+  .statNumber {
+    font-size: 1.75rem;
+  }
+
+  .statLabel {
+    font-size: 0.75rem;
   }
 
   .brandGallery {
@@ -444,16 +533,52 @@
   }
 
   .brandCard {
-    height: 260px;
+    height: 240px;
   }
 
   .brandTitle {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .brandLabel {
+    font-size: 0.625rem;
+    letter-spacing: 3px;
+  }
+
+  .brandDesc {
+    font-size: 0.813rem;
+  }
+
+  .brandCenter {
+    padding: 40px 16px;
+  }
+
+  .brandSlogan {
+    font-size: 1.25rem;
+  }
+
+  .brandSub {
+    font-size: 0.875rem;
   }
 
   .btnPrimary,
-  .btnOutlineHero {
+  .btnOutline {
     padding: 14px 24px;
-    font-size: 1rem;
+    font-size: 0.938rem;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .cta {
+    padding: 48px 0;
+  }
+
+  .ctaTitle {
+    font-size: 1.375rem;
+  }
+
+  .ctaDescription {
+    font-size: 0.938rem;
   }
 }

@@ -499,4 +499,45 @@
   .container {
     padding: 0 var(--spacing-md);
   }
+
+  .hygieneGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophyImageWrap {
+    height: 160px;
+  }
+
+  .philosophyTitle {
+    font-size: var(--font-size-lg);
+    margin: 16px 16px 8px;
+  }
+
+  .philosophyDescription {
+    padding: 0 16px 24px;
+    font-size: var(--font-size-sm);
+  }
+
+  .personnelImageWrap,
+  .hygieneImageWrap {
+    height: 200px;
+  }
+
+  .visionBox {
+    padding: var(--spacing-lg);
+  }
+
+  .greetingContent p {
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+  }
+
+  .overviewLabel {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .overviewValue {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
 }
