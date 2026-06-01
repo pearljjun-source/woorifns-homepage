@@ -6,15 +6,15 @@
    =========================================== */
 :root {
   /* Color Palette */
-  --color-primary: #2D5A27;
-  --color-primary-dark: #1B3A18;
-  --color-secondary: #385C3E;
-  --color-accent: #E8F5E1;
-  --color-background: #F7FAF5;
+  --color-primary: #228B22;
+  --color-primary-dark: #1A6B1A;
+  --color-secondary: #3A7D44;
+  --color-accent: #F5F0E1;
+  --color-background: #FDFBF7;
   --color-surface: #FFFFFF;
   --color-text-primary: #1A1A1A;
   --color-text-secondary: #5A5A5A;
-  --color-point: #E8B44C;
+  --color-point: #D4A843;
   --color-text-on-primary: #FFFFFF;
 
   /* Typography */

@@ -128,9 +128,7 @@
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.8;
   margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  white-space: nowrap;
 }
 
 .heroButtons {

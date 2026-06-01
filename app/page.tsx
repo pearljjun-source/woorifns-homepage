@@ -1,16 +1,53 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FoodService",
+  name: "우리푸드앤드서비스",
+  alternateName: "Woori Food and Service Inc.",
+  url: "https://www.woorifns.kr",
+  telephone: "1899-1094",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "통정8로 48-55",
+    addressLocality: "천안시 동남구",
+    addressRegion: "충남",
+    addressCountry: "KR",
+  },
+  description:
+    "20년 전통 급식위탁 전문기업. 위탁급식·단체급식·구내식당·사내식당 전문 운영. 기업체, 기숙사, 관공서, 요양원, 요양병원 급식을 HACCP 기준 위생관리와 영양사 식단관리로 제공합니다.",
+  foundingDate: "2006",
+  areaServed: [
+    { "@type": "City", name: "천안시" },
+    { "@type": "City", name: "아산시" },
+    { "@type": "City", name: "세종시" },
+    { "@type": "AdministrativeArea", name: "충청남도" },
+  ],
+  knowsAbout: [
+    "위탁급식",
+    "단체급식",
+    "구내식당",
+    "사내식당",
+    "HACCP",
+    "영양사 식단관리",
+    "친환경 식재료",
+  ],
+};
+
 export default function Home() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>정직한 밥상, 건강한 내일</h1>
           <p className={styles.heroSubtitle}>
-            20년 전통 급식위탁 전문기업 우리푸드앤드서비스가 건강하고 맛있는
-            식사를 약속합니다
+            20년 전통 급식위탁 전문기업 우리푸드앤드서비스가 건강하고 맛있는 식사를 약속합니다
           </p>
           <div className={styles.heroButtons}>
             <Link href="/contact" className={styles.btnPrimary}>

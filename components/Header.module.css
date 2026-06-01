@@ -28,11 +28,10 @@
   flex-shrink: 0;
 }
 
-.logoText {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  letter-spacing: -0.5px;
+.logoImage {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Desktop nav */

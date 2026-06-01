@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -24,7 +24,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
-          <span className={styles.logoText}>Woori FnS</span>
+          <Logo className={styles.logoImage} />
         </Link>
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ""}`}>
