@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { createClient } from "@supabase/supabase-js";
 
@@ -16,7 +16,8 @@ export async function POST(req: NextRequest) {
       message,
     } = body;
 
-    // Supabase ???    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    // Supabase 저장
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
     if (supabaseUrl && supabaseKey) {
@@ -35,7 +36,7 @@ export async function POST(req: NextRequest) {
       ]);
     }
 
-    // ?대찓??諛쒖넚
+    // 이메일 발송
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
 
@@ -55,9 +56,9 @@ export async function POST(req: NextRequest) {
     });
 
     const mealInfo = [
-      breakfastPerWeek !== "0" ? `議곗떇 ${breakfastPerWeek}?? : null,
-      lunchPerWeek !== "0" ? `以묒떇 ${lunchPerWeek}?? : null,
-      dinnerPerWeek !== "0" ? `?앹떇 ${dinnerPerWeek}?? : null,
+      breakfastPerWeek !== "0" ? `조식 ${breakfastPerWeek}회` : null,
+      lunchPerWeek !== "0" ? `중식 ${lunchPerWeek}회` : null,
+      dinnerPerWeek !== "0" ? `석식 ${dinnerPerWeek}회` : null,
     ]
       .filter(Boolean)
       .join(", ");
@@ -65,46 +66,46 @@ export async function POST(req: NextRequest) {
     const htmlContent = `
       <div style="font-family: 'Malgun Gothic', sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background-color: #228B22; padding: 20px; text-align: center;">
-          <h1 style="color: #fff; margin: 0; font-size: 20px;">?덈줈??湲됱떇 ?곷떞 臾몄쓽</h1>
+          <h1 style="color: #fff; margin: 0; font-size: 20px;">새로운 급식 상담 문의</h1>
         </div>
         <div style="padding: 24px; background: #f9f9f9;">
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold; width: 120px;">?뚯궗紐?/td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold; width: 120px;">회사명</td>
               <td style="padding: 12px; border-bottom: 1px solid #ddd;">${companyName}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">?대떦?먮챸</td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">담당자명</td>
               <td style="padding: 12px; border-bottom: 1px solid #ddd;">${contactName}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">?곕씫泥?/td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">연락처</td>
               <td style="padding: 12px; border-bottom: 1px solid #ddd;">${phone}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">?앹닔</td>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd;">${mealCount ? mealCount + "紐? : "誘몄엯??}</td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">식수</td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd;">${mealCount ? mealCount + "명" : "미입력"}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">二쇨컙 ?앹궗</td>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd;">${mealInfo || "誘몄꽑??}</td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">주간 식사</td>
+              <td style="padding: 12px; border-bottom: 1px solid #ddd;">${mealInfo || "미선택"}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; font-weight: bold; vertical-align: top;">臾몄쓽 ?댁슜</td>
-              <td style="padding: 12px; white-space: pre-wrap;">${message || "?놁쓬"}</td>
+              <td style="padding: 12px; font-weight: bold; vertical-align: top;">문의 내용</td>
+              <td style="padding: 12px; white-space: pre-wrap;">${message || "없음"}</td>
             </tr>
           </table>
         </div>
         <div style="padding: 16px; text-align: center; color: #888; font-size: 12px;">
-          ?곕━?몃뱶?ㅻ뱶?쒕퉬???덊럹?댁??먯꽌 諛쒖넚??臾몄쓽?낅땲??
+          (주)우리푸드앤드서비스 홈페이지에서 발송된 문의입니다.
         </div>
       </div>
     `;
 
     await transporter.sendMail({
-      from: `"?곕━?몃뱶?ㅻ뱶?쒕퉬???덊럹?댁?" <${smtpUser}>`,
+      from: `"(주)우리푸드앤드서비스 홈페이지" <${smtpUser}>`,
       to: "stormroller@hanmail.net",
-      subject: `[湲됱떇 ?곷떞] ${companyName} - ${contactName}`,
+      subject: `[급식 상담] ${companyName} - ${contactName}`,
       html: htmlContent,
     });
 
@@ -112,9 +113,8 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Contact API error:", error);
     return NextResponse.json(
-      { success: false, error: "臾몄쓽 ?묒닔 以??ㅻ쪟媛 諛쒖깮?덉뒿?덈떎." },
+      { success: false, error: "문의 접수 중 오류가 발생했습니다." },
       { status: 500 }
     );
   }
 }
-

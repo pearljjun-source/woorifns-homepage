@@ -44,13 +44,7 @@
 .logoBold {
   font-weight: 800;
   color: var(--color-primary, #2d5a27);
-  font-size: 20px;
-}
-
-.logoLight {
-  font-weight: 400;
-  color: var(--color-text, #1a1a1a);
-  font-size: 17px;
+  font-size: 19px;
 }
 
 /* Desktop nav */

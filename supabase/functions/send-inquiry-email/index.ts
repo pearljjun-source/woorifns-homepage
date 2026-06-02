@@ -53,7 +53,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "우리푸드앤드서비스 <onboarding@resend.dev>",
+        from: "(주)우리푸드앤드서비스 <onboarding@resend.dev>",
         to: [NOTIFY_EMAIL],
         subject: `[문의접수] ${record.company_name} - ${record.contact_name}`,
         html: emailHtml,

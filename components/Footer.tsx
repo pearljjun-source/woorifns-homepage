@@ -1,12 +1,12 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Logo from "./Logo";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
-  { href: "/", label: "?? },
-  { href: "/about", label: "?뚯궗?뚭컻" },
-  { href: "/services", label: "?쒕퉬?? },
-  { href: "/contact", label: "臾몄쓽?섍린" },
+  { href: "/", label: "홈" },
+  { href: "/about", label: "회사소개" },
+  { href: "/services", label: "서비스" },
+  { href: "/contact", label: "문의하기" },
 ];
 
 export default function Footer() {
@@ -17,19 +17,19 @@ export default function Footer() {
           <div className={styles.companyInfo}>
             <div className={styles.companyNameRow}>
               <Logo className={styles.logoIcon} />
-              <h3 className={styles.companyName}>?쒖슦由ы뫖?쒖븻?쒖꽌鍮꾩뒪</h3>
+              <h3 className={styles.companyName}>(주)우리푸드앤드서비스</h3>
             </div>
-            <p className={styles.companyDesc}>湲됱떇?꾪긽 ?꾨Ц湲곗뾽</p>
+            <p className={styles.companyDesc}>급식위탁 전문기업</p>
             <address className={styles.address}>
-              <p>異⑸궓 泥쒖븞???숇궓援??듭젙8濡?48-55</p>
+              <p>충남 천안시 동남구 남부대로 48-55</p>
               <p>
-                <span>??쒖쟾?? </span>
+                <span>대표전화: </span>
                 <a href="tel:1899-1094" className={styles.contactLink}>
                   1899-1094
                 </a>
               </p>
               <p>
-                <span>?대??? </span>
+                <span>대표자: </span>
                 <a href="tel:010-8812-1080" className={styles.contactLink}>
                   010-8812-1080
                 </a>
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.quickLinks}>
-            <h4 className={styles.quickLinksTitle}>諛붾줈媛湲?/h4>
+            <h4 className={styles.quickLinksTitle}>바로가기</h4>
             <nav className={styles.quickLinksNav}>
               {quickLinks.map((link) => (
                 <Link
@@ -54,10 +54,9 @@ export default function Footer() {
         </div>
 
         <div className={styles.copyright}>
-          <p>&copy; 2025 ?쒖슦由ы뫖?쒖븻?쒖꽌鍮꾩뒪. All rights reserved.</p>
+          <p>&copy; 2025 (주)우리푸드앤드서비스. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 }
-
