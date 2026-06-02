@@ -29,7 +29,13 @@
       "Bash(curl:*)",
       "Bash(gh auth:*)",
       "Bash(gh repo:*)",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:pixabay.com)",
+      "Bash(git:*)",
+      "WebFetch(domain:www.woorifns.kr)",
+      "Bash(npx next:*)"
     ]
   }
 }

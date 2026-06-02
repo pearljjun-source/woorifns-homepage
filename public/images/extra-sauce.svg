@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="0" fill="#FFFDE7"/>
+  <!-- Bowl 1 - Curry -->
+  <ellipse cx="130" cy="150" rx="55" ry="22" fill="#E0D5C0" opacity="0.4"/>
+  <path d="M80 130 Q80 155 130 155 Q180 155 180 130" fill="#FFFFFF" stroke="#D4C5B0" stroke-width="2"/>
+  <ellipse cx="130" cy="130" rx="50" ry="18" fill="#FFFFFF" stroke="#D4C5B0" stroke-width="2"/>
+  <ellipse cx="130" cy="130" rx="42" ry="14" fill="#F9A825"/>
+  <!-- Curry details -->
+  <circle cx="120" cy="128" r="4" fill="#F57F17" opacity="0.5"/>
+  <circle cx="138" cy="132" r="3" fill="#F57F17" opacity="0.5"/>
+  <circle cx="128" cy="135" r="2.5" fill="#FF8F00" opacity="0.4"/>
+
+  <!-- Bowl 2 - Jjajang -->
+  <ellipse cx="270" cy="150" rx="55" ry="22" fill="#E0D5C0" opacity="0.4"/>
+  <path d="M220 130 Q220 155 270 155 Q320 155 320 130" fill="#FFFFFF" stroke="#D4C5B0" stroke-width="2"/>
+  <ellipse cx="270" cy="130" rx="50" ry="18" fill="#FFFFFF" stroke="#D4C5B0" stroke-width="2"/>
+  <ellipse cx="270" cy="130" rx="42" ry="14" fill="#4E342E"/>
+  <!-- Jjajang details -->
+  <circle cx="260" cy="128" r="3" fill="#3E2723" opacity="0.5"/>
+  <circle cx="278" cy="132" r="2.5" fill="#3E2723" opacity="0.5"/>
+
+  <!-- Ladle -->
+  <path d="M195 95 L200 120" stroke="#9E9E9E" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="200" cy="125" rx="12" ry="8" fill="#BDBDBD" stroke="#9E9E9E" stroke-width="1.5"/>
+
+  <!-- Plus signs -->
+  <text x="200" y="80" text-anchor="middle" fill="#2E7D32" font-size="24" font-weight="800" font-family="sans-serif">PLUS+</text>
+  <!-- Small decorative dots -->
+  <circle cx="100" cy="90" r="3" fill="#F9A825" opacity="0.3"/>
+  <circle cx="300" cy="85" r="4" fill="#4E342E" opacity="0.2"/>
+  <circle cx="85" cy="100" r="2" fill="#FF8F00" opacity="0.3"/>
+  <circle cx="315" cy="95" r="2.5" fill="#5D4037" opacity="0.2"/>
+</svg>

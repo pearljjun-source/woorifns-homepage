@@ -1,12 +1,12 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "회사소개 | 우리푸드앤드서비스",
+  title: "?뚯궗?뚭컻 | ?곕━?몃뱶?ㅻ뱶?쒕퉬??,
   description:
-    "㈜우리푸드앤드서비스는 2005년 설립 이래 산업체, 병원, 요양원, 학교 등 다양한 현장에서 정직한 급식 서비스를 제공하는 급식위탁 전문기업입니다.",
+    "?쒖슦由ы뫖?쒖븻?쒖꽌鍮꾩뒪??2005???ㅻ┰ ?대옒 ?곗뾽泥? 蹂묒썝, ?붿뼇?? ?숆탳 ???ㅼ뼇???꾩옣?먯꽌 ?뺤쭅??湲됱떇 ?쒕퉬?ㅻ? ?쒓났?섎뒗 湲됱떇?꾪긽 ?꾨Ц湲곗뾽?낅땲??",
 };
 
 export default function AboutPage() {
@@ -15,216 +15,213 @@ export default function AboutPage() {
       {/* Page Hero Banner */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>회사소개</h1>
+          <h1 className={styles.heroTitle}>?뚯궗?뚭컻</h1>
           <p className={styles.heroBreadcrumb}>
-            <Link href="/">홈</Link> &gt; 회사소개
+            <Link href="/">??/Link> &gt; ?뚯궗?뚭컻
           </p>
         </div>
       </section>
 
-      {/* 인사말 Section */}
+      {/* ?몄궗留?Section */}
       <section className={styles.greeting}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>
-            정직한 밥상, 건강한 내일
+            ?뺤쭅??諛μ긽, 嫄닿컯???댁씪
           </h2>
           <div className={styles.greetingLayout}>
             <div className={styles.greetingContent}>
               <p>
-                저희 ㈜우리푸드앤드서비스는 2005년부터 단체급식 사업을 운영하며
-                단 하나의 원칙을 지켜왔습니다.
+                ????쒖슦由ы뫖?쒖븻?쒖꽌鍮꾩뒪??2005?꾨????⑥껜湲됱떇 ?ъ뾽???댁쁺?섎ŉ
+                ???섎굹???먯튃??吏耳쒖솕?듬땲??
               </p>
               <p>
-                단순히 끼니를 해결하는 공간을 넘어, 직원들이 매일 기대하는
-                식사 시간이 될 수 있도록 메뉴의 다양성과 품질에 끊임없이
-                투자하고 있습니다.
+                ?⑥닚???쇰땲瑜??닿껐?섎뒗 怨듦컙???섏뼱, 吏곸썝?ㅼ씠 留ㅼ씪 湲곕??섎뒗
+                ?앹궗 ?쒓컙???????덈룄濡?硫붾돱???ㅼ뼇?깃낵 ?덉쭏???딆엫?놁씠
+                ?ъ옄?섍퀬 ?덉뒿?덈떎.
               </p>
               <p>
-                정직한 식재료, 정성 어린 조리, 진심을 담은 서비스.
+                ?뺤쭅???앹옱猷? ?뺤꽦 ?대┛ 議곕━, 吏꾩떖???댁? ?쒕퉬??
               </p>
               <p>
-                현재까지 축적해온 실 경험과 앞선 운영 능력으로 합리적인 운영을
-                약속드리며, 집에서의 편안함과 어머니의 정성으로 감동 서비스를
-                실현하겠습니다.
+                ?꾩옱源뚯? 異뺤쟻?댁삩 ??寃쏀뿕怨??욎꽑 ?댁쁺 ?λ젰?쇰줈 ?⑸━?곸씤 ?댁쁺??                ?쎌냽?쒕━硫? 吏묒뿉?쒖쓽 ?몄븞?④낵 ?대㉧?덉쓽 ?뺤꽦?쇰줈 媛먮룞 ?쒕퉬?ㅻ?
+                ?ㅽ쁽?섍쿋?듬땲??
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 회사 개요 Section */}
+      {/* ?뚯궗 媛쒖슂 Section */}
       <section className={styles.overview}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>회사 개요</h2>
+          <h2 className={styles.sectionTitle}>?뚯궗 媛쒖슂</h2>
           <div className={styles.overviewTable}>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>회사명</span>
+              <span className={styles.overviewLabel}>?뚯궗紐?/span>
               <span className={styles.overviewValue}>
-                ㈜우리푸드앤드서비스
+                ?쒖슦由ы뫖?쒖븻?쒖꽌鍮꾩뒪
               </span>
             </div>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>설립연도</span>
-              <span className={styles.overviewValue}>2005년 사업개시</span>
+              <span className={styles.overviewLabel}>?ㅻ┰?곕룄</span>
+              <span className={styles.overviewValue}>2005???ъ뾽媛쒖떆</span>
             </div>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>소재지</span>
+              <span className={styles.overviewLabel}>?뚯옱吏</span>
               <span className={styles.overviewValue}>
-                충남 천안시 동남구 통정8로 48-55
+                異⑸궓 泥쒖븞???숇궓援??듭젙8濡?48-55
               </span>
             </div>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>대표전화</span>
+              <span className={styles.overviewLabel}>??쒖쟾??/span>
               <span className={styles.overviewValue}>1899-1094</span>
             </div>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>휴대폰</span>
+              <span className={styles.overviewLabel}>?대???/span>
               <span className={styles.overviewValue}>010-8812-1080</span>
             </div>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>주요사업</span>
+              <span className={styles.overviewLabel}>二쇱슂?ъ뾽</span>
               <span className={styles.overviewValue}>
-                단체급식 · 위탁경영 전문기업
+                ?⑥껜湲됱떇 쨌 ?꾪긽寃쎌쁺 ?꾨Ц湲곗뾽
               </span>
             </div>
             <div className={styles.overviewRow}>
-              <span className={styles.overviewLabel}>고객사 업종</span>
+              <span className={styles.overviewLabel}>怨좉컼???낆쥌</span>
               <span className={styles.overviewValue}>
-                산업체 · 병원 · 요양원 · 학교
+                ?곗뾽泥?쨌 蹂묒썝 쨌 ?붿뼇??쨌 ?숆탳
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 경영이념 Section */}
+      {/* 寃쎌쁺?대뀗 Section */}
       <section className={styles.philosophy}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>경영이념 &amp; 비전</h2>
-          <p className={styles.sectionSubtitle}>&ldquo;정직한 밥상, 건강한 내일&rdquo;</p>
+          <h2 className={styles.sectionTitle}>寃쎌쁺?대뀗 &amp; 鍮꾩쟾</h2>
+          <p className={styles.sectionSubtitle}>&ldquo;?뺤쭅??諛μ긽, 嫄닿컯???댁씪&rdquo;</p>
           <div className={styles.philosophyGrid}>
             <div className={styles.philosophyCard}>
               <div className={styles.philosophyImageWrap}>
-                <Image src="/images/fresh-vegetables.jpg" alt="신선한 채소" fill className={styles.philosophyImage} />
+                <Image src="/images/fresh-vegetables.jpg" alt="?좎꽑??梨꾩냼" fill className={styles.philosophyImage} />
               </div>
-              <h3 className={styles.philosophyTitle}>신선 (FRESHNESS)</h3>
+              <h3 className={styles.philosophyTitle}>?좎꽑 (FRESHNESS)</h3>
               <p className={styles.philosophyDescription}>
-                엄격한 기준의 신선 식재료, 산지 직거래
+                ?꾧꺽??湲곗????좎꽑 ?앹옱猷? ?곗? 吏곴굅??              </p>
+            </div>
+            <div className={styles.philosophyCard}>
+              <div className={styles.philosophyImageWrap}>
+                <Image src="/images/chef-cooking.jpg" alt="?뺤꽦?ㅻ윭??議곕━" fill className={styles.philosophyImage} />
+              </div>
+              <h3 className={styles.philosophyTitle}>?뺤꽦 (SINCERITY)</h3>
+              <p className={styles.philosophyDescription}>
+                ?쒖? ?덉떆?쇱? ?숇젴??議곕━?ъ쓽 ?뺤꽦
               </p>
             </div>
             <div className={styles.philosophyCard}>
               <div className={styles.philosophyImageWrap}>
-                <Image src="/images/chef-cooking.jpg" alt="정성스러운 조리" fill className={styles.philosophyImage} />
+                <Image src="/images/trust-handshake.jpg" alt="?좊ː???뚰듃?덉떗" fill className={styles.philosophyImage} />
               </div>
-              <h3 className={styles.philosophyTitle}>정성 (SINCERITY)</h3>
+              <h3 className={styles.philosophyTitle}>?좊ː (TRUST)</h3>
               <p className={styles.philosophyDescription}>
-                표준 레시피와 숙련된 조리사의 정성
-              </p>
-            </div>
-            <div className={styles.philosophyCard}>
-              <div className={styles.philosophyImageWrap}>
-                <Image src="/images/trust-handshake.jpg" alt="신뢰의 파트너십" fill className={styles.philosophyImage} />
-              </div>
-              <h3 className={styles.philosophyTitle}>신뢰 (TRUST)</h3>
-              <p className={styles.philosophyDescription}>
-                투명한 운영, 20년 파트너십
+                ?щ챸???댁쁺, 20???뚰듃?덉떗
               </p>
             </div>
           </div>
           <div className={styles.visionBox}>
-            <p><strong>미션:</strong> 매일 한 끼가 건강과 활력의 원천</p>
-            <p><strong>비전:</strong> 신뢰받는 급식 전문기업으로 지역사회와 함께 성장합니다</p>
+            <p><strong>誘몄뀡:</strong> 留ㅼ씪 ???쇨? 嫄닿컯怨??쒕젰???먯쿇</p>
+            <p><strong>鍮꾩쟾:</strong> ?좊ː諛쏅뒗 湲됱떇 ?꾨Ц湲곗뾽?쇰줈 吏??궗?뚯? ?④퍡 ?깆옣?⑸땲??/p>
           </div>
         </div>
       </section>
 
-      {/* 인력 관리 Section */}
+      {/* ?몃젰 愿由?Section */}
       <section className={styles.personnel}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>인력 관리 &amp; 교육</h2>
+          <h2 className={styles.sectionTitle}>?몃젰 愿由?&amp; 援먯쑁</h2>
           <p className={styles.sectionSubtitle}>
-            100% 직접 채용으로 책임감과 소속감이 탁월한 우수 인재 보유
+            100% 吏곸젒 梨꾩슜?쇰줈 梨낆엫媛먭낵 ?뚯냽媛먯씠 ?곸썡???곗닔 ?몄옱 蹂댁쑀
           </p>
           <div className={styles.personnelImageWrap}>
-            <Image src="/images/about-team.jpg" alt="전문 조리팀" fill className={styles.personnelImage} />
+            <Image src="/images/about-team.jpg" alt="?꾨Ц 議곕━?" fill className={styles.personnelImage} />
           </div>
           <ul className={styles.featureList}>
             <li className={styles.featureItem}>
               <span className={styles.featureDot} aria-hidden="true"></span>
               <div>
-                <strong>100% 직접 채용</strong>
+                <strong>100% 吏곸젒 梨꾩슜</strong>
                 <p>
-                  창립 이후 예외 없이 직접 채용을 원칙으로 하여 안정적이고
-                  책임감 있는 인력을 배치합니다 (용역 수수료 0원)
+                  李쎈┰ ?댄썑 ?덉쇅 ?놁씠 吏곸젒 梨꾩슜???먯튃?쇰줈 ?섏뿬 ?덉젙?곸씠怨?                  梨낆엫媛??덈뒗 ?몃젰??諛곗튂?⑸땲??(?⑹뿭 ?섏닔猷?0??
                 </p>
               </div>
             </li>
             <li className={styles.featureItem}>
               <span className={styles.featureDot} aria-hidden="true"></span>
               <div>
-                <strong>입사 시 교육</strong>
-                <p>위생 · 조리기본 · 서비스 마인드 교육</p>
+                <strong>?낆궗 ??援먯쑁</strong>
+                <p>?꾩깮 쨌 議곕━湲곕낯 쨌 ?쒕퉬??留덉씤??援먯쑁</p>
               </div>
             </li>
             <li className={styles.featureItem}>
               <span className={styles.featureDot} aria-hidden="true"></span>
               <div>
-                <strong>월 1회 정기 교육</strong>
-                <p>위생 · 안전 · 서비스 통합교육</p>
+                <strong>??1???뺢린 援먯쑁</strong>
+                <p>?꾩깮 쨌 ?덉쟾 쨌 ?쒕퉬???듯빀援먯쑁</p>
               </div>
             </li>
             <li className={styles.featureItem}>
               <span className={styles.featureDot} aria-hidden="true"></span>
               <div>
-                <strong>분기 1회 집합교육</strong>
-                <p>교육센터 집합교육</p>
+                <strong>遺꾧린 1??吏묓빀援먯쑁</strong>
+                <p>援먯쑁?쇳꽣 吏묓빀援먯쑁</p>
               </div>
             </li>
             <li className={styles.featureItem}>
               <span className={styles.featureDot} aria-hidden="true"></span>
               <div>
-                <strong>수시 교육</strong>
-                <p>신메뉴 레시피, CS 마인드 특강</p>
+                <strong>?섏떆 援먯쑁</strong>
+                <p>?좊찓???덉떆?? CS 留덉씤???밴컯</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
-      {/* 위생 안전 관리 Section */}
+      {/* ?꾩깮 ?덉쟾 愿由?Section */}
       <section className={styles.hygiene}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>위생 &middot; 안전 관리</h2>
+          <h2 className={styles.sectionTitle}>?꾩깮 &middot; ?덉쟾 愿由?/h2>
           <p className={styles.sectionSubtitle}>
-            HACCP 위생관리 및 정기점검으로 안전한 먹거리 제공
+            HACCP ?꾩깮愿由?諛??뺢린?먭??쇰줈 ?덉쟾??癒밴굅由??쒓났
           </p>
           <div className={styles.hygieneImageWrap}>
-            <Image src="/images/about-hygiene.jpg" alt="위생관리 현장" fill className={styles.hygieneImage} />
+            <Image src="/images/about-hygiene.jpg" alt="?꾩깮愿由??꾩옣" fill className={styles.hygieneImage} />
           </div>
           <div className={styles.hygieneGrid}>
             <div className={styles.hygieneCard}>
-              <h3>매일 위생 점검</h3>
-              <p>일일 정성조회, 개인위생 점검</p>
+              <h3>留ㅼ씪 ?꾩깮 ?먭?</h3>
+              <p>?쇱씪 ?뺤꽦議고쉶, 媛쒖씤?꾩깮 ?먭?</p>
             </div>
             <div className={styles.hygieneCard}>
-              <h3>주 1회 위생교육</h3>
-              <p>책임자 주관 위생교육 실시</p>
+              <h3>二?1???꾩깮援먯쑁</h3>
+              <p>梨낆엫??二쇨? ?꾩깮援먯쑁 ?ㅼ떆</p>
             </div>
             <div className={styles.hygieneCard}>
-              <h3>월 1회 불시 점검</h3>
-              <p>불시 방문점검, 전문업체 정기소독</p>
+              <h3>??1??遺덉떆 ?먭?</h3>
+              <p>遺덉떆 諛⑸Ц?먭?, ?꾨Ц?낆껜 ?뺢린?뚮룆</p>
             </div>
             <div className={styles.hygieneCard}>
-              <h3>분기 1회 집합교육</h3>
-              <p>교육센터 집합교육 실시</p>
+              <h3>遺꾧린 1??吏묓빀援먯쑁</h3>
+              <p>援먯쑁?쇳꽣 吏묓빀援먯쑁 ?ㅼ떆</p>
             </div>
             <div className={styles.hygieneCard}>
-              <h3>영업배상책임보험</h3>
-              <p>영업 · 생산물 · 가스 배상책임보험 가입</p>
+              <h3>?곸뾽諛곗긽梨낆엫蹂댄뿕</h3>
+              <p>?곸뾽 쨌 ?앹궛臾?쨌 媛??諛곗긽梨낆엫蹂댄뿕 媛??/p>
             </div>
             <div className={styles.hygieneCard}>
-              <h3>HACCP 기준 관리</h3>
-              <p>식품안전관리인증기준에 따른 체계적 위생 관리</p>
+              <h3>HACCP 湲곗? 愿由?/h3>
+              <p>?앺뭹?덉쟾愿由ъ씤利앷린以???곕Ⅸ 泥닿퀎???꾩깮 愿由?/p>
             </div>
           </div>
         </div>
@@ -232,3 +229,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

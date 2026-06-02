@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 const navLinks = [
-  { href: "/", label: "홈" },
-  { href: "/about", label: "회사소개" },
-  { href: "/services", label: "서비스" },
-  { href: "/contact", label: "문의하기" },
+  { href: "/", label: "?? },
+  { href: "/about", label: "?뚯궗?뚭컻" },
+  { href: "/services", label: "?쒕퉬?? },
+  { href: "/contact", label: "臾몄쓽?섍린" },
 ];
 
 export default function Header() {
@@ -24,8 +24,8 @@ export default function Header() {
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
           <span className={styles.logoText}>
-            <span className={styles.logoBold}>우리</span>
-            <span className={styles.logoLight}>푸드앤드서비스</span>
+            <span className={styles.logoBold}>?곕━</span>
+            <span className={styles.logoLight}>?몃뱶?ㅻ뱶?쒕퉬??/span>
           </span>
         </Link>
 
@@ -47,7 +47,7 @@ export default function Header() {
         <button
           className={`${styles.hamburger} ${mobileMenuOpen ? styles.hamburgerOpen : ""}`}
           onClick={toggleMenu}
-          aria-label="메뉴 열기"
+          aria-label="硫붾돱 ?닿린"
           aria-expanded={mobileMenuOpen}
         >
           <span className={styles.hamburgerLine} />
@@ -58,3 +58,4 @@ export default function Header() {
     </header>
   );
 }
+

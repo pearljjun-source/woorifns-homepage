@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" rx="0" fill="#FFF8F0"/>
+  <!-- Plate -->
+  <ellipse cx="200" cy="140" rx="90" ry="30" fill="#E8E0D8" opacity="0.5"/>
+  <ellipse cx="200" cy="135" rx="80" ry="26" fill="#FFFFFF" stroke="#D4C5B0" stroke-width="2"/>
+  <ellipse cx="200" cy="135" rx="65" ry="20" fill="#FFF5EB" stroke="#E8DDD0" stroke-width="1"/>
+  <!-- Meat (samgyeopsal) -->
+  <rect x="165" y="115" width="70" height="18" rx="4" fill="#C47A5A"/>
+  <rect x="165" y="115" width="70" height="6" rx="3" fill="#D4937A"/>
+  <rect x="168" y="121" width="64" height="3" rx="1.5" fill="#E8B09A" opacity="0.6"/>
+  <!-- Garnish leaves -->
+  <path d="M155 120 Q148 110 155 105 Q158 112 162 115Z" fill="#5D8C3E"/>
+  <path d="M245 118 Q252 108 247 103 Q244 110 240 114Z" fill="#5D8C3E"/>
+  <!-- Steam -->
+  <path d="M185 100 Q183 90 186 82" stroke="#D4C5B0" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M200 95 Q198 85 201 77" stroke="#D4C5B0" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M215 98 Q213 88 216 80" stroke="#D4C5B0" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <!-- Star badge -->
+  <circle cx="320" cy="55" r="28" fill="#2E7D32" opacity="0.9"/>
+  <text x="320" y="50" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700" font-family="sans-serif">SPECIAL</text>
+  <text x="320" y="65" text-anchor="middle" fill="#FFD54F" font-size="12" font-weight="800" font-family="sans-serif">MENU</text>
+</svg>

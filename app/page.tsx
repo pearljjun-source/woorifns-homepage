@@ -1,38 +1,38 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "FoodService",
-  name: "우리푸드앤드서비스",
+  name: "?곕━?몃뱶?ㅻ뱶?쒕퉬??,
   alternateName: "Woori Food and Service Inc.",
   url: "https://www.woorifns.kr",
   telephone: "1899-1094",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "통정8로 48-55",
-    addressLocality: "천안시 동남구",
-    addressRegion: "충남",
+    streetAddress: "?듭젙8濡?48-55",
+    addressLocality: "泥쒖븞???숇궓援?,
+    addressRegion: "異⑸궓",
     addressCountry: "KR",
   },
   description:
-    "20년 전통 급식위탁 전문기업. 위탁급식·단체급식·구내식당·사내식당 전문 운영. 기업체, 기숙사, 관공서, 요양원, 요양병원 급식을 HACCP 기준 위생관리와 영양사 식단관리로 제공합니다.",
+    "20???꾪넻 湲됱떇?꾪긽 ?꾨Ц湲곗뾽. ?꾪긽湲됱떇쨌?⑥껜湲됱떇쨌援щ궡?앸떦쨌?щ궡?앸떦 ?꾨Ц ?댁쁺. 湲곗뾽泥? 湲곗닕?? 愿怨듭꽌, ?붿뼇?? ?붿뼇蹂묒썝 湲됱떇??HACCP 湲곗? ?꾩깮愿由ъ? ?곸뼇???앸떒愿由щ줈 ?쒓났?⑸땲??",
   foundingDate: "2006",
   areaServed: [
-    { "@type": "City", name: "천안시" },
-    { "@type": "City", name: "아산시" },
-    { "@type": "City", name: "세종시" },
-    { "@type": "AdministrativeArea", name: "충청남도" },
+    { "@type": "City", name: "泥쒖븞?? },
+    { "@type": "City", name: "?꾩궛?? },
+    { "@type": "City", name: "?몄쥌?? },
+    { "@type": "AdministrativeArea", name: "異⑹껌?⑤룄" },
   ],
   knowsAbout: [
-    "위탁급식",
-    "단체급식",
-    "구내식당",
-    "사내식당",
+    "?꾪긽湲됱떇",
+    "?⑥껜湲됱떇",
+    "援щ궡?앸떦",
+    "?щ궡?앸떦",
     "HACCP",
-    "영양사 식단관리",
-    "친환경 식재료",
+    "?곸뼇???앸떒愿由?,
+    "移쒗솚寃??앹옱猷?,
   ],
 };
 
@@ -47,7 +47,7 @@ export default function Home() {
       <section className={styles.hero}>
         <Image
           src="/images/hero-bg.jpg"
-          alt="초록 나뭇잎 배경"
+          alt="珥덈줉 ?섎춪??諛곌꼍"
           fill
           priority
           className={styles.heroBg}
@@ -56,19 +56,18 @@ export default function Home() {
         <div className={styles.heroText}>
           <span className={styles.heroLabel}>SINCE 2005</span>
           <h1 className={styles.heroTitle}>
-            <span className={styles.heroTitleBold}>정직한 밥상,</span><br /><span className={styles.heroTitleBold}>건강한 내일</span>
+            <span className={styles.heroTitleBold}>?뺤쭅??諛μ긽,</span><br /><span className={styles.heroTitleBold}>嫄닿컯???댁씪</span>
           </h1>
           <span className={styles.heroDivider} />
           <p className={styles.heroSubtitle}>
-            20년 전통 급식위탁 전문기업<br />
-            우리푸드앤드서비스가 건강하고 맛있는 식사를 약속합니다
-          </p>
+            20???꾪넻 湲됱떇?꾪긽 ?꾨Ц湲곗뾽<br />
+            ?곕━?몃뱶?ㅻ뱶?쒕퉬?ㅺ? 嫄닿컯?섍퀬 留쏆엳???앹궗瑜??쎌냽?⑸땲??          </p>
           <div className={styles.heroButtons}>
             <Link href="/contact" className={styles.btnPrimaryHero}>
-              무료 상담 신청
+              臾대즺 ?곷떞 ?좎껌
             </Link>
             <Link href="/services" className={styles.btnOutlineHero}>
-              서비스 보기
+              ?쒕퉬??蹂닿린
             </Link>
           </div>
         </div>
@@ -78,29 +77,29 @@ export default function Home() {
       <section className={styles.intro}>
         <div className={styles.container}>
           <p className={styles.introText}>
-            2005년부터 한결같은 마음으로,<br />
-            <strong>정직한 식재료</strong>와 <strong>정성 어린 조리</strong>로 매일의 한 끼를 책임집니다.
+            2005?꾨????쒓껐媛숈? 留덉쓬?쇰줈,<br />
+            <strong>?뺤쭅???앹옱猷?/strong>? <strong>?뺤꽦 ?대┛ 議곕━</strong>濡?留ㅼ씪?????쇰? 梨낆엫吏묐땲??
           </p>
           <div className={styles.statsGrid}>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>20</span>
-              <span className={styles.statUnit}>년+</span>
-              <p className={styles.statLabel}>급식 운영 경력</p>
+              <span className={styles.statUnit}>??</span>
+              <p className={styles.statLabel}>湲됱떇 ?댁쁺 寃쎈젰</p>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>100</span>
               <span className={styles.statUnit}>%</span>
-              <p className={styles.statLabel}>직접 채용 원칙</p>
+              <p className={styles.statLabel}>吏곸젒 梨꾩슜 ?먯튃</p>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>365</span>
-              <span className={styles.statUnit}>일</span>
-              <p className={styles.statLabel}>연중 운영 체계</p>
+              <span className={styles.statUnit}>??/span>
+              <p className={styles.statLabel}>?곗쨷 ?댁쁺 泥닿퀎</p>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>HACCP</span>
               <span className={styles.statUnit}></span>
-              <p className={styles.statLabel}>위생관리 기준 준수</p>
+              <p className={styles.statLabel}>?꾩깮愿由?湲곗? 以??/p>
             </div>
           </div>
         </div>
@@ -110,43 +109,43 @@ export default function Home() {
       <section className={styles.brand}>
         <div className={styles.brandGallery}>
           <div className={styles.brandCard}>
-            <Image src="/images/gallery-industrial.jpg" alt="맞춤 영양 식단" fill className={styles.brandImage} />
+            <Image src="/images/gallery-industrial.jpg" alt="留욎땄 ?곸뼇 ?앸떒" fill className={styles.brandImage} />
             <div className={styles.brandOverlay}>
               <span className={styles.brandLabel}>NUTRITION</span>
-              <h3 className={styles.brandTitle}>영양</h3>
-              <p className={styles.brandDesc}>전문 영양사 · 맞춤 식단 설계</p>
+              <h3 className={styles.brandTitle}>?곸뼇</h3>
+              <p className={styles.brandDesc}>?꾨Ц ?곸뼇??쨌 留욎땄 ?앸떒 ?ㅺ퀎</p>
             </div>
           </div>
           <div className={styles.brandCard}>
-            <Image src="/images/gallery-hospital.jpg" alt="정성 담긴 요리" fill className={styles.brandImage} />
+            <Image src="/images/gallery-hospital.jpg" alt="?뺤꽦 ?닿릿 ?붾━" fill className={styles.brandImage} />
             <div className={styles.brandOverlay}>
               <span className={styles.brandLabel}>SINCERITY</span>
-              <h3 className={styles.brandTitle}>정성</h3>
-              <p className={styles.brandDesc}>숙련된 조리사 · 표준 레시피</p>
+              <h3 className={styles.brandTitle}>?뺤꽦</h3>
+              <p className={styles.brandDesc}>?숇젴??議곕━??쨌 ?쒖? ?덉떆??/p>
             </div>
           </div>
           <div className={styles.brandCard}>
-            <Image src="/images/gallery-elderly.jpg" alt="신뢰의 파트너십" fill className={styles.brandImage} />
+            <Image src="/images/gallery-elderly.jpg" alt="?좊ː???뚰듃?덉떗" fill className={styles.brandImage} />
             <div className={styles.brandOverlay}>
               <span className={styles.brandLabel}>TRUST</span>
-              <h3 className={styles.brandTitle}>신뢰</h3>
-              <p className={styles.brandDesc}>투명한 운영 · 20년 파트너십</p>
+              <h3 className={styles.brandTitle}>?좊ː</h3>
+              <p className={styles.brandDesc}>?щ챸???댁쁺 쨌 20???뚰듃?덉떗</p>
             </div>
           </div>
           <div className={styles.brandCard}>
-            <Image src="/images/gallery-school.jpg" alt="신선한 식재료" fill className={styles.brandImage} />
+            <Image src="/images/gallery-school.jpg" alt="?좎꽑???앹옱猷? fill className={styles.brandImage} />
             <div className={styles.brandOverlay}>
               <span className={styles.brandLabel}>FRESHNESS</span>
-              <h3 className={styles.brandTitle}>신선</h3>
-              <p className={styles.brandDesc}>산지 직거래 · 당일 조리</p>
+              <h3 className={styles.brandTitle}>?좎꽑</h3>
+              <p className={styles.brandDesc}>?곗? 吏곴굅??쨌 ?뱀씪 議곕━</p>
             </div>
           </div>
         </div>
         <div className={styles.brandCenter}>
-          <p className={styles.brandSlogan}>정직한 밥상, 건강한 내일</p>
-          <p className={styles.brandSub}>20년 전통 급식 전문기업 우리푸드앤드서비스</p>
+          <p className={styles.brandSlogan}>?뺤쭅??諛μ긽, 嫄닿컯???댁씪</p>
+          <p className={styles.brandSub}>20???꾪넻 湲됱떇 ?꾨Ц湲곗뾽 ?곕━?몃뱶?ㅻ뱶?쒕퉬??/p>
           <Link href="/services" className={styles.btnOutline}>
-            서비스 보기
+            ?쒕퉬??蹂닿린
           </Link>
         </div>
       </section>
@@ -154,15 +153,16 @@ export default function Home() {
       {/* CTA Section */}
       <section className={styles.cta}>
         <div className={styles.container}>
-          <h2 className={styles.ctaTitle}>급식 위탁, 지금 상담하세요</h2>
+          <h2 className={styles.ctaTitle}>湲됱떇 ?꾪긽, 吏湲??곷떞?섏꽭??/h2>
           <p className={styles.ctaDescription}>
-            맞춤 견적과 메뉴 구성을 무료로 상담해 드립니다
+            留욎땄 寃ъ쟻怨?硫붾돱 援ъ꽦??臾대즺濡??곷떞???쒕┰?덈떎
           </p>
           <Link href="/contact" className={styles.btnPrimary}>
-            무료 상담 신청
+            臾대즺 ?곷떞 ?좎껌
           </Link>
         </div>
       </section>
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-.footer {
+﻿.footer {
   background-color: var(--color-primary-dark, #1b3a18);
   color: var(--color-text-on-primary, #ffffff);
   padding: 60px 0 0;
@@ -125,3 +125,4 @@
     gap: 16px;
   }
 }
+

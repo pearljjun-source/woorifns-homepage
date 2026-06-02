@@ -1,11 +1,11 @@
-export default function Logo({ className }: { className?: string }) {
+﻿export default function Logo({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
       fill="none"
       className={className}
-      aria-label="우리푸드앤드서비스 로고"
+      aria-label="?곕━?몃뱶?ㅻ뱶?쒕퉬??濡쒓퀬"
       role="img"
     >
       {/* Icon mark - original style */}
@@ -35,3 +35,4 @@ export default function Logo({ className }: { className?: string }) {
     </svg>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.woorifns.kr";
 
@@ -30,3 +30,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
+
