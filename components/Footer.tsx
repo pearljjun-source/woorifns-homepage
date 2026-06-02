@@ -19,9 +19,9 @@ export default function Footer() {
               <Logo className={styles.logoIcon} />
               <h3 className={styles.companyName}>(주)우리푸드앤드서비스</h3>
             </div>
-            <p className={styles.companyDesc}>급식위탁 전문기업</p>
+            <p className={styles.companyDesc}>단체급식 전문기업</p>
             <address className={styles.address}>
-              <p>충남 천안시 동남구 남부대로 48-55</p>
+              <p>충남 천안시 동남구 통정8로 48-55</p>
               <p>
                 <span>대표전화: </span>
                 <a href="tel:1899-1094" className={styles.contactLink}>

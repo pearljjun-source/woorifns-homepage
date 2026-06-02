@@ -18,7 +18,7 @@ const jsonLd = {
   },
   description:
     "20년 전통 단체급식 전문기업. 위탁급식·단체급식·구내식당·사내식당 전문 운영. 기업체, 기숙사, 관공서, 요양원, 요양병원 급식을 HACCP 기준 위생관리와 영양사 식단관리로 제공합니다.",
-  foundingDate: "2006",
+  foundingDate: "2005",
   areaServed: [
     { "@type": "City", name: "천안시" },
     { "@type": "City", name: "아산시" },
