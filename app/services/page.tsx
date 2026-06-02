@@ -3,17 +3,32 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "서비스 소개 | (주)우리푸드앤드서비스",
+  title: "서비스 소개",
+  description:
+    "산업체, 병원, 요양원, 학교 등 업종별 맞춤 단체급식 서비스. HACCP 위생관리와 영양사 식단관리로 안전하고 건강한 급식을 제공합니다.",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "홈", item: "https://www.woorifns.kr" },
+    { "@type": "ListItem", position: 2, name: "서비스 소개", item: "https://www.woorifns.kr/services" },
+  ],
 };
 
 export default function ServicesPage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Page Hero Banner */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>서비스 소개</h1>
-          <p className={styles.breadcrumb}>홈 &gt; 서비스</p>
+          <p className={styles.breadcrumb}><Link href="/">홈</Link> &gt; 서비스</p>
         </div>
       </section>
 

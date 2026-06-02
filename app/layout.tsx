@@ -56,6 +56,14 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: BASE_URL,
     siteName: "(주)우리푸드앤드서비스",
+    images: [
+      {
+        url: `${BASE_URL}/images/hero-bg.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "(주)우리푸드앤드서비스 단체급식",
+      },
+    ],
   },
   robots: {
     index: true,

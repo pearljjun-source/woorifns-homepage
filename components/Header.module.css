@@ -127,8 +127,21 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Overlay */
+.overlay {
+  display: none;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
+
   .hamburger {
     display: flex;
   }

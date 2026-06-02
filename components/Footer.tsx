@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.copyright}>
-          <p>&copy; 2025 (주)우리푸드앤드서비스. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} (주)우리푸드앤드서비스. All rights reserved.</p>
         </div>
       </div>
     </footer>

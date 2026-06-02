@@ -4,14 +4,27 @@ import styles from "./page.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "회사소개 | (주)우리푸드앤드서비스",
+  title: "회사소개",
   description:
     "(주)우리푸드앤드서비스는 2005년 설립 이래 산업체, 병원, 요양원, 학교 등 다양한 현장에서 정직한 급식 서비스를 제공하는 단체급식 전문기업입니다.",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "홈", item: "https://www.woorifns.kr" },
+    { "@type": "ListItem", position: 2, name: "회사소개", item: "https://www.woorifns.kr/about" },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Page Hero Banner */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>

@@ -51,7 +51,7 @@ export default function ContactPage() {
       if (!res.ok) throw new Error('API error');
       setIsSubmitted(true);
       setFormData(initialFormData);
-    } catch (err) {
+    } catch {
       setSubmitError('문의 접수 중 오류가 발생했습니다. 전화로 문의해 주세요.');
     } finally {
       setIsSubmitting(false);

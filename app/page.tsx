@@ -99,7 +99,6 @@ export default function Home() {
             </div>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>HACCP</span>
-              <span className={styles.statUnit}></span>
               <p className={styles.statLabel}>위생관리 기준 준수</p>
             </div>
           </div>
