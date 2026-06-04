@@ -39,9 +39,6 @@ function validateInput(body: unknown): {
     contactName: string;
     phone: string;
     mealCount: string;
-    breakfastPerWeek: string;
-    lunchPerWeek: string;
-    dinnerPerWeek: string;
     message: string;
   };
 } {
@@ -69,14 +66,9 @@ function validateInput(body: unknown): {
   const mealCount = typeof b.mealCount === "string" ? b.mealCount.trim().slice(0, 10) : "";
   const message = typeof b.message === "string" ? b.message.trim().slice(0, 2000) : "";
 
-  const weekOptions = ["0", "1", "2", "3", "4", "5", "6", "7"];
-  const breakfastPerWeek = weekOptions.includes(String(b.breakfastPerWeek)) ? String(b.breakfastPerWeek) : "0";
-  const lunchPerWeek = weekOptions.includes(String(b.lunchPerWeek)) ? String(b.lunchPerWeek) : "0";
-  const dinnerPerWeek = weekOptions.includes(String(b.dinnerPerWeek)) ? String(b.dinnerPerWeek) : "0";
-
   return {
     valid: true,
-    data: { companyName, contactName, phone, mealCount, breakfastPerWeek, lunchPerWeek, dinnerPerWeek, message },
+    data: { companyName, contactName, phone, mealCount, message },
   };
 }
 
@@ -102,7 +94,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { companyName, contactName, phone, mealCount, breakfastPerWeek, lunchPerWeek, dinnerPerWeek, message } =
+    const { companyName, contactName, phone, mealCount, message } =
       validation.data;
 
     // [S4] Supabase 저장 — 에러 처리 포함
@@ -117,19 +109,13 @@ export async function POST(req: NextRequest) {
           contact_name: contactName,
           phone,
           meal_count: mealCount ? parseInt(mealCount) : null,
-          breakfast_per_week: parseInt(breakfastPerWeek),
-          lunch_per_week: parseInt(lunchPerWeek),
-          dinner_per_week: parseInt(dinnerPerWeek),
           message,
         },
       ]);
 
       if (dbError) {
         console.error("Supabase insert error:", dbError);
-        return NextResponse.json(
-          { success: false, error: "문의 저장 중 오류가 발생했습니다." },
-          { status: 500 }
-        );
+        // DB 저장 실패해도 이메일은 발송 시도
       }
     }
 
@@ -151,14 +137,6 @@ export async function POST(req: NextRequest) {
         pass: smtpPass,
       },
     });
-
-    const mealInfo = [
-      breakfastPerWeek !== "0" ? `조식 ${breakfastPerWeek}회` : null,
-      lunchPerWeek !== "0" ? `중식 ${lunchPerWeek}회` : null,
-      dinnerPerWeek !== "0" ? `석식 ${dinnerPerWeek}회` : null,
-    ]
-      .filter(Boolean)
-      .join(", ");
 
     // [S1] 모든 사용자 입력을 escapeHtml()로 이스케이프하여 XSS 방지
     const htmlContent = `
@@ -183,10 +161,6 @@ export async function POST(req: NextRequest) {
             <tr>
               <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">식수</td>
               <td style="padding: 12px; border-bottom: 1px solid #ddd;">${mealCount ? escapeHtml(mealCount) + "명" : "미입력"}</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd; font-weight: bold;">주간 식사</td>
-              <td style="padding: 12px; border-bottom: 1px solid #ddd;">${escapeHtml(mealInfo) || "미선택"}</td>
             </tr>
             <tr>
               <td style="padding: 12px; font-weight: bold; vertical-align: top;">문의 내용</td>

@@ -8,9 +8,6 @@ interface FormData {
   contactName: string;
   phone: string;
   mealCount: string;
-  breakfastPerWeek: string;
-  lunchPerWeek: string;
-  dinnerPerWeek: string;
   message: string;
 }
 
@@ -19,9 +16,6 @@ const initialFormData: FormData = {
   contactName: '',
   phone: '',
   mealCount: '',
-  breakfastPerWeek: '0',
-  lunchPerWeek: '0',
-  dinnerPerWeek: '0',
   message: '',
 };
 
@@ -160,66 +154,6 @@ export default function ContactPage() {
                         value={formData.mealCount}
                         onChange={handleChange}
                       />
-                    </div>
-
-                    <div className={styles.formGroup}>
-                      <label className={styles.label}>주간 식사 횟수</label>
-                      <div className={styles.mealRow}>
-                        <div className={styles.mealSelect}>
-                          <label htmlFor="breakfastPerWeek" className={styles.mealLabel}>
-                            조식
-                          </label>
-                          <select
-                            id="breakfastPerWeek"
-                            name="breakfastPerWeek"
-                            className={styles.select}
-                            value={formData.breakfastPerWeek}
-                            onChange={handleChange}
-                          >
-                            {[0, 1, 2, 3, 4, 5, 6, 7].map((n) => (
-                              <option key={n} value={n}>
-                                {n}회
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div className={styles.mealSelect}>
-                          <label htmlFor="lunchPerWeek" className={styles.mealLabel}>
-                            중식
-                          </label>
-                          <select
-                            id="lunchPerWeek"
-                            name="lunchPerWeek"
-                            className={styles.select}
-                            value={formData.lunchPerWeek}
-                            onChange={handleChange}
-                          >
-                            {[0, 1, 2, 3, 4, 5, 6, 7].map((n) => (
-                              <option key={n} value={n}>
-                                {n}회
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div className={styles.mealSelect}>
-                          <label htmlFor="dinnerPerWeek" className={styles.mealLabel}>
-                            석식
-                          </label>
-                          <select
-                            id="dinnerPerWeek"
-                            name="dinnerPerWeek"
-                            className={styles.select}
-                            value={formData.dinnerPerWeek}
-                            onChange={handleChange}
-                          >
-                            {[0, 1, 2, 3, 4, 5, 6, 7].map((n) => (
-                              <option key={n} value={n}>
-                                {n}회
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
                     </div>
 
                     <div className={styles.formGroup}>
