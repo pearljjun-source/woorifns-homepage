@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { createClient } from "@supabase/supabase-js";
 
 // [S1] HTML 특수문자 이스케이프 — XSS 방지
@@ -119,24 +119,15 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // 이메일 발송
-    const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
+    // Resend 이메일 발송
+    const resendApiKey = process.env.RESEND_API_KEY;
 
-    if (!smtpUser || !smtpPass) {
-      console.error("SMTP credentials not configured");
+    if (!resendApiKey) {
+      console.error("Resend API key not configured");
       return NextResponse.json({ success: true, emailSent: false });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
-      auth: {
-        user: smtpUser,
-        pass: smtpPass,
-      },
-    });
+    const resend = new Resend(resendApiKey);
 
     // [S1] 모든 사용자 입력을 escapeHtml()로 이스케이프하여 XSS 방지
     const htmlContent = `
@@ -174,15 +165,19 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    // [S5] 수신 이메일을 환경변수에서 가져옴
     const notifyEmail = process.env.NOTIFY_EMAIL || "stormroller@hanmail.net";
 
-    await transporter.sendMail({
-      from: `"(주)우리푸드앤드서비스 홈페이지" <${smtpUser}>`,
+    const { error: emailError } = await resend.emails.send({
+      from: "(주)우리푸드앤드서비스 홈페이지 <noreply@woorifns.kr>",
       to: notifyEmail,
       subject: `[급식 상담] ${escapeHtml(companyName)} - ${escapeHtml(contactName)}`,
       html: htmlContent,
     });
+
+    if (emailError) {
+      console.error("Resend error:", emailError);
+      return NextResponse.json({ success: true, emailSent: false });
+    }
 
     return NextResponse.json({ success: true, emailSent: true });
   } catch (error) {
