@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
+import CountUpStats from "../components/CountUpStats";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -81,27 +82,7 @@ export default function Home() {
             2005년부터 한결같은 마음으로,<br />
             <strong>정직한 식재료</strong>와 <strong>정성 어린 조리</strong>로 매일의 한 끼를 책임집니다.
           </p>
-          <div className={styles.statsGrid}>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>20</span>
-              <span className={styles.statUnit}>년+</span>
-              <p className={styles.statLabel}>급식 운영 경력</p>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>100</span>
-              <span className={styles.statUnit}>%</span>
-              <p className={styles.statLabel}>직접 채용 원칙</p>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>365</span>
-              <span className={styles.statUnit}>일</span>
-              <p className={styles.statLabel}>연중 운영 체계</p>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>HACCP</span>
-              <p className={styles.statLabel}>위생관리 기준 준수</p>
-            </div>
-          </div>
+          <CountUpStats />
         </div>
       </section>
 
