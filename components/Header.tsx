@@ -33,6 +33,26 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
+          <svg
+            className={styles.logoIcon}
+            width="36"
+            height="36"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
+            <rect width="32" height="32" rx="6" fill="#1A5C2A" />
+            <text
+              x="16"
+              y="23"
+              fontFamily="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+              fontSize="20"
+              fontWeight="900"
+              fill="#8BC34A"
+              textAnchor="middle"
+            >
+              W
+            </text>
+          </svg>
           <span className={styles.logoText}>
             <span className={styles.logoBold}>(주)우리푸드앤드서비스</span>
           </span>
