@@ -151,6 +151,7 @@
     top: 70px;
     left: 0;
     right: 0;
+    z-index: 1000; /* 오버레이(999) 위 — 메뉴 링크가 탭 가능해야 함 */
     flex-direction: column;
     background-color: var(--color-surface, #ffffff);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
