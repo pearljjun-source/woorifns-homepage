@@ -49,6 +49,18 @@ test("메뉴 바깥(오버레이) 탭 → 메뉴만 닫히고 페이지 유지",
   await expect(page).toHaveURL(/\/$/);
 });
 
+test("메뉴 열린 상태에서 로고 탭 → 홈 이동 + 메뉴 닫힘", async ({ page }) => {
+  await page.goto("/about");
+  await hamburger(page).click();
+  await expect(hamburger(page)).toHaveAttribute("aria-expanded", "true");
+
+  // 로고도 오버레이 위에 있어야 탭 가능 (오버레이는 헤더 바깥 형제)
+  await page.locator("header").getByRole("link", { name: /우리푸드앤드서비스/ }).click();
+
+  await expect(page).toHaveURL(/\/$/);
+  await expect(hamburger(page)).toHaveAttribute("aria-expanded", "false");
+});
+
 test("Escape 키 → 메뉴 닫힘", async ({ page }) => {
   await page.goto("/");
   await hamburger(page).click();

@@ -30,6 +30,7 @@ export default function Header() {
   }, [mobileMenuOpen, closeMenu]);
 
   return (
+    <>
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
@@ -58,11 +59,6 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* A1: 메뉴 열림 시 배경 오버레이 — 클릭하면 닫힘 */}
-        {mobileMenuOpen && (
-          <div className={styles.overlay} onClick={closeMenu} aria-hidden="true" />
-        )}
-
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ""}`}>
           {navLinks.map((link) => (
             <Link
@@ -90,5 +86,12 @@ export default function Header() {
         </button>
       </div>
     </header>
+
+    {/* A1: 메뉴 열림 시 배경 오버레이 — 클릭하면 닫힘.
+        헤더 바깥 형제로 두어 헤더 전체(로고·햄버거·메뉴)가 오버레이 위에 오도록 함 */}
+    {mobileMenuOpen && (
+      <div className={styles.overlay} onClick={closeMenu} aria-hidden="true" />
+    )}
+    </>
   );
 }
