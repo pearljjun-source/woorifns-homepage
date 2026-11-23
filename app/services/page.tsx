@@ -138,7 +138,7 @@ export default function ServicesPage() {
                 <h3 className={styles.cardTitle}>밥 품질관리</h3>
                 <p className={styles.cardDescription}>
                   도정 후 14일 이내 사용 · 보관온도 15℃ 유지 ·
-                  취반 후 30분 이상 보관 금지 · 싸리기 5% 이내 관리
+                  취반 후 30분 이상 보관 금지
                 </p>
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function ServicesPage() {
                 <h3 className={styles.cardTitle}>국 · 탕 품질관리</h3>
                 <p className={styles.cardDescription}>
                   육수는 하루 전 진하게 준비 · 재료에 밑간해 양념이 배게 ·
-                  약불에서 오래 끓여 제 맛 · 천연조미료 사용
+                  약불에서 오래 끓여 본연의 맛 · 천연조미료 사용
                 </p>
               </div>
             </div>
